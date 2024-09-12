@@ -1,4 +1,5 @@
-/*leer 2 valores y cout:
+/*
+leer 2 valores y cout:
     1. la suma 
     2. resta
     3. producto
@@ -10,12 +11,12 @@
 #include <iostream>
 using namespace std;
 
-inline int suma(int,int);
-inline int resta(int,int);
-inline int producto(int,int);
-inline float division(int,int);
-inline float promedio(int,int);
-inline float dobleprod(int,int);
+inline float suma(float,float);
+inline float resta(float,float);
+inline float producto(float,float);
+inline float division(float,float);
+inline float promedio(float,float);
+inline float dobleprod(float,float);
 
 int main(){
     float x;
@@ -23,34 +24,36 @@ int main(){
     cout<<"Ingrese dos valores:"<<endl;
     cin>>x;
     cin>>y;
-    printf("%d + %d = %d\n", x, y, suma(x,y));
-    printf("%d - %d = %d\n", x, y, resta(x,y));
-    printf("%d * %d = %f\n", x, y, producto(x,y));
-    printf("%d / %d = %f\n", x, y, division(x,y));
-    printf("%d promediado sobre %d (x+y) = %f", x, x+y, promedio(x,y));
-    printf("doble producto de %d menos la mitad de %d = %f",x,y,dobleprod(x,y));
+    printf("%2.1f + %2.1f = %2.1f\n", x, y, suma(x,y));
+    printf("%2.1f - %2.1f = %2.1f\n", x, y, resta(x,y));
+    printf("%2.1f * %2.1f = %2.1f\n", x, y, producto(x,y));
+    printf("%2.1f / %2.1f = %2.1f\n", x, y, division(x,y));
+    printf("%2.1f promediado sobre %2.1f (%2.1f + %2.1f) = %2.1f\n", x, x+y, x, y, promedio(x,y));
+    printf("doble producto de %2.1f menos la mitad de %2.1f = %2.1f\n",x,y,dobleprod(x,y));
+
+    return 0;
 }
 
-int suma(int x,int y){
+inline float suma(float x,float y){
     return x+y;
 }
 
-int resta(int x, int y){
+inline float resta(float x, float y){
     return x-y;
 }
 
-int producto(int x, int y){
+inline float producto(float x, float y){
     return x*y;
 }
 
-float division(int x, int y){
+inline float division(float x, float y){
     return (float)x/y;
 }
 
-float promedio(int x, int y){
+inline float promedio(float x, float y){
     return (float)x/(y+x);
 }
 
-float dobleprod(int x, int y){
+inline float dobleprod(float x, float y){
     return 2*x - y/2;
 }
