@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-using namespace std;
+//using namespace std; NO USAR USING NAMESPACE EN HEADERS
 
 class clase_puntos{
     private:
