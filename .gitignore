@@ -1,3 +1,6 @@
 
 *.exe
 *.exe
+*.un~
+*.swp
+*.cpp~
