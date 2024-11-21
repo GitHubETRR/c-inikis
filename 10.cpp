@@ -15,6 +15,7 @@ int main(){
     int x;
     float y;
     scanf ("%d",y); 
-    printf("%f",x);
+    printf("%f",x);    
+
     return 0;
 }

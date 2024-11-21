@@ -18,10 +18,10 @@ class empleado{
         void asignarNombre(const char* newNombre);
         const char* getNombre();
 
-        void asignarEdad(unsigned int newNombre);
+        void asignarEdad(unsigned int newEdad);
         unsigned int getEdad();
 
-        void asignarSalario(unsigned int newNombre);
+        void asignarSalario(unsigned int newSalario);
         unsigned int getSalario();
         virtual int calcularSalario(int diasLaborales);
 };
@@ -36,7 +36,7 @@ empleado::~empleado(){
 }
 
 
-void empleado::asignarNombre(const char* newNombre){
+inline void empleado::asignarNombre(const char* newNombre){
     nombre=newNombre;
 }
 
@@ -44,7 +44,7 @@ inline const char* empleado::getNombre(){
     return nombre;
 }
 
-void empleado::asignarEdad(unsigned int newEdad){
+inline void empleado::asignarEdad(unsigned int newEdad){
     edad=newEdad;
 }
 
@@ -52,7 +52,7 @@ inline unsigned int empleado::getEdad(){
     return edad;
 }
 
-void empleado::asignarSalario(unsigned int newSalario){
+inline void empleado::asignarSalario(unsigned int newSalario){
     salario=newSalario;
 }
 
@@ -112,10 +112,10 @@ int freelancer::calcularSalario(int diasLaborales){
 
 int main(void){
     empleado lista_empleados[4];
-    lista_empleados[0] = empleado("Jorge", 25, 560000);;
-    lista_empleados[1] = empleadoFijo("Pepe", 45, 300000);;
-    lista_empleados[2] = empleadoTemporal("Nacho", 18, 211500);;
-    lista_empleados[3] = freelancer("Facundo", 22, 150000);;
+    lista_empleados[0] = empleado("Jorge", 25, 560000);
+    lista_empleados[1] = empleadoFijo("Pepe", 45, 300000);
+    lista_empleados[2] = empleadoTemporal("Nacho", 18, 211500);
+    lista_empleados[3] = freelancer("Facundo", 22, 150000);
 
     std::cout << "Esta compania tiene los siguientes empleados:" << std::endl;
     for (int i = 0; i <= 3; i++){
@@ -125,5 +125,4 @@ int main(void){
             << " y un salario de " << lista_empleados[i].getSalario() 
             << "." << std::endl;
     }
-
 }

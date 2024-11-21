@@ -23,6 +23,12 @@ int func_int2(){
     return 10;
 };
 
+//PUNTERO 3: char *(*(*x[][8])())[]
+//
+//punt_array es un array que cada uno tiene un array de 8 elementos que son
+//punteros a funciones que devuelven punteros a arrays con punteros a chars
+//como elemento
+char *(*(*punt_array[][8])())[];
 
 int main(void){
     //implementacion de PUNTERO 1
@@ -40,6 +46,10 @@ int main(void){
     std::cout<<array_func_int[0]()<<std::endl;
 
     punt = &array_func_int;
+
+    //implementacion de PUNTERO 3
+    std::cout<<"Implementacion de puntero 2"<<std::endl;
+    
 
     return 0;
 }

@@ -4,7 +4,11 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\MinGW\\include**"
+                "C:\\MinGW\\include**",
+                "C:\\Program Files (x86)\\Arduino\\libraries**",
+                "C:\\Users\\imena\\Documents\\Arduino\\libraries**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\EEPROM\\src"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +17,7 @@
             ],
             "cStandard": "c11",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+            "compilerPath": "C:/Users/imena/Documents/MinGW/bin/gcc.exe"
         }
     ],
     "version": 4

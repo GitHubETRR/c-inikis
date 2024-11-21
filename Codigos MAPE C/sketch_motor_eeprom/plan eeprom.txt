@@ -1,0 +1,18 @@
+MOVIMIENTO struct:
+	PROGRESO
+	CANT
+
+Se ejecuta MOVIMIENTO funcion:
+	Se genera un nuevo MOVIMIENTO y se actualizan sus miembros:
+	PROGRESO (inicia en 0 y va incrementando)
+	CANT = definido por usuario
+		(podria ser una cant predefinida de pasos
+		multiplicado por la CANT especificada por
+		el usuario, en el sentido de que tenga que
+		enviar 1, 2, 3 o 4, que serian los cuartos
+		que recorreria el motor (2048/4))
+	
+	motor.step(CANT) hasta terminar
+
+MOVIMIENTO se puede interrumpir.
+La idea es que si se ejecuta el programa, este busque en la memoria EEPROM si hay algún movimiento guardado. En el caso de haber, se llama motor.step a que se mueva la diferencia entre la CANT y el PROGRESO.
