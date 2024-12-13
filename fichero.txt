@@ -1,0 +1,1 @@
+Estamos aprendiendo como se escribe en un fichero y como se lee desde el.
